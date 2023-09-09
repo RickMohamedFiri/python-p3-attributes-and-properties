@@ -17,3 +17,32 @@ APPROVED_JOBS = [
 
 class Person:
     pass
+
+
+
+class Human:
+    species = "Homo sapiens"
+    def __init__(self, name):
+        self.name = name
+        self._age = 0
+
+    def get_age(self):
+        print(f"Retrieving age.{self._age}")
+        return self._age
+
+    def set_age(self, age):
+        print(f"Setting age to { age }")
+        self._age = age
+
+    age = property(get_age, set_age,)
+
+adam=Human('Adam')
+adam.get_age()
+
+adam.set_age(20)
+
+adam.get_age()
+
+print(Human.age)
+
+
